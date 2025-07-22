@@ -1,8 +1,9 @@
+// src/Routes/NavItem/NavItem.jsx - UPDATED
+
 import { NavLink } from "react-router-dom";
 
 const NavItem = ({ route, closeMenu }) => {
   const handleClick = () => {
-    // Close menu when a route is clicked (only on mobile)
     if (closeMenu) {
       closeMenu();
     }
@@ -15,8 +16,8 @@ const NavItem = ({ route, closeMenu }) => {
         onClick={handleClick}
         className={({ isActive }) =>
           isActive
-            ? "text-white md:bg-purple-950 md:px-3 md:py-2 rounded-md font-semibold"
-            : "md:px-3 md:py-2 hover:underline transition-all duration-300"
+            ? "text-purple-700 bg-white px-3 py-2 rounded-md font-semibold" 
+            : "md:px-3 md:py-2 hover:bg-white hover:text-purple-700 rounded-md transition-all duration-300"
         }
       >
         {route.name}
