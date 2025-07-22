@@ -34,36 +34,42 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
+  // return the navbar
   return (
-    <div className="navbar px-4 md:p-0 primary-color" ref={navbarRef}>
-      <div className="navbar-start">
-        <a href="/" className="btn btn-ghost text-2xl font-bold ">
-          Our Gadgets
-        </a>
-      </div>
-      <div
-        className={`absolute right-4 duration-700 ease-in-out py-2 px-4 rounded-lg text-sm bg-transparent backdrop-blur-md shadow-lg
+    <div className="px-4 pt-4 md:px-8 md:pt-8 bg-slate-100">
+      <div className="navbar px-4 bg-purple-700 text-white rounded-t-xl md:rounded-t-2xl" ref={navbarRef}>
+        <div className="navbar-start">
+          <a
+            href="/"
+            className=" md:px-4 md:py-2 text-2xl font-bold rounded-md hover:bg-white hover:text-purple-700 transition-all duration-300"
+          >
+            Our Gadgets
+          </a>
+        </div>
+        <div
+          className={`absolute right-4 duration-700 ease-in-out py-2 px-5 rounded-lg text-sm bg-transparent backdrop-blur-md shadow-lg
           ${
             isOpen ? "top-16" : "-top-48"
           } md:static md:duration-75 md:navbar-center md:flex md:py-0 md:px-0 md:rounded-none md:shadow-none`}
-      >
-        <Links closeMenu={closeMenu} />
-      </div>
-      <div className="navbar-end flex items-center gap-2">
-        <a className="btn btn-circle hover:bg-gray-300 transition-all duration-100">
-          <HiOutlineShoppingCart className="text-xl primary-text" />
-        </a>
-        <a className="btn btn-circle hover:bg-gray-300 transition-all duration-100">
-          <FaRegHeart className="text-xl primary-text" />
-        </a>
+        >
+          <Links closeMenu={closeMenu} />
+        </div>
+        <div className="navbar-end flex items-center gap-2">
+          <a className="btn btn-circle hover:bg-purple-200 transition-all duration-100">
+            <HiOutlineShoppingCart className="text-xl text-purple-700" />
+          </a>
+          <a className="btn btn-circle hover:bg-purple-200 transition-all duration-100">
+            <FaRegHeart className="text-xl text-purple-700" />
+          </a>
 
-        {/* Mobile menu toggle */}
-        <div onClick={toggleMenu} className="md:hidden cursor-pointer">
-          {isOpen ? (
-            <IoClose className="text-2xl" />
-          ) : (
-            <HiMenuAlt1 className="text-2xl" />
-          )}
+          {/* Mobile menu toggle */}
+          <div onClick={toggleMenu} className="md:hidden cursor-pointer">
+            {isOpen ? (
+              <IoClose className="text-2xl" />
+            ) : (
+              <HiMenuAlt1 className="text-2xl" />
+            )}
+          </div>
         </div>
       </div>
     </div>

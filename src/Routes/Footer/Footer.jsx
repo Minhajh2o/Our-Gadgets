@@ -5,12 +5,14 @@ const Footer = () => {
     <footer className="bg-White text-gray-800 py-12">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header Section */}
-        <div className="text-center mb-8">
+        <div className="text-center">
           <h2 className="text-3xl font-bold mb-2">Gadget Heaven</h2>
           <p className="text-gray-600">
             Leading the way in cutting-edge technology and innovation.
           </p>
         </div>
+
+        <hr className="my-4 md:my-8 text-slate-300" />
 
         {/* Footer Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
