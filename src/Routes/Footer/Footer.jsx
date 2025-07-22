@@ -1,12 +1,10 @@
-import React from "react";
-
 const Footer = () => {
   return (
-    <footer className="bg-White text-gray-800 py-12">
+    <footer className="bg-White text-gray-800 pt-12 pb-4 md:pt-24 md:pb-8">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header Section */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-2">Gadget Heaven</h2>
+          <h2 className="text-3xl font-bold mb-2">Our Gadgets</h2>
           <p className="text-gray-600">
             Leading the way in cutting-edge technology and innovation.
           </p>
@@ -86,6 +84,15 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+        </div>
+
+        <hr className="my-4 md:my-8 text-slate-300" />
+
+        {/* Copyright Section */}
+        <div className="text-center">
+          <p className="text-gray-600">
+            &copy; {new Date().getFullYear()} Our Gadgets. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

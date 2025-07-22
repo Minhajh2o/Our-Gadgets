@@ -1,5 +1,3 @@
-// src/Routes/NavItem/NavItem.jsx - UPDATED
-
 import { NavLink } from "react-router-dom";
 
 const NavItem = ({ route, closeMenu }) => {
