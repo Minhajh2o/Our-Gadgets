@@ -1,2 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.primary-color {
+  @apply bg-[#9538E2] text-white;
+}
+
+.primary-text {
+    @apply text-[#9538E2];
+}
+.primary-bg {
+    @apply bg-[#9538E2];
+}

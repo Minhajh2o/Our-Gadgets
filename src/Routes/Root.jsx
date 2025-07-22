@@ -1,9 +1,16 @@
 import React from 'react';
+import Navbar from './NavBar/Navbar';
+import { Outlet } from 'react-router-dom';
+import Footer from './Footer/Footer';
 
 const Root = () => {
     return (
         <div>
-            <h1>Welcome to Our Gadgets</h1>
+            <div className='container px-4 mx-auto'>
+            <Navbar />
+            </div>
+            <Outlet />
+            <Footer />
         </div>
     );
 };
