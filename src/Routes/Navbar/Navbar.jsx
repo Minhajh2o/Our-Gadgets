@@ -47,9 +47,9 @@ const Navbar = () => {
           </a>
         </div>
         <div
-          className={`absolute right-4 duration-700 ease-in-out py-2 px-5 rounded-lg text-sm bg-transparent backdrop-blur-md shadow-lg
+          className={`absolute right-11 duration-700 ease-in-out py-2 px-5 rounded-lg text-sm bg-white shadow-lg
           ${
-            isOpen ? "top-16 z-50" : "-top-48"
+            isOpen ? "top-20 z-50" : "-top-48"
           } md:static md:duration-75 md:navbar-center md:flex md:py-0 md:px-0 md:rounded-none md:shadow-none`}
         >
           <Links closeMenu={closeMenu} />
