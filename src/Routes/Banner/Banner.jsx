@@ -2,7 +2,7 @@ import bannerImage from "../../assets/banner.jpg";
 
 const Banner = () => {
     return (
-        <div className="relative bg-purple-700 text-center text-white pt-6 lg:pt-12 pb-24 md:pb-28 lg:pb-48 px-4 rounded-b-2xl mb-40 md:mb-48 lg:mb-52 xl:mb-72 2xl:mb-96">
+        <header className="relative bg-purple-700 text-center text-white pt-6 lg:pt-12 pb-24 md:pb-28 lg:pb-48 px-4 rounded-b-2xl mb-40 md:mb-48 lg:mb-52 xl:mb-72 2xl:mb-96">
 
         {/* Banner Text Content */}
         <h1 className="text-3xl md:text-4xl lg:text-[52px] font-bold max-w-4xl mx-auto leading-tight">
@@ -24,7 +24,7 @@ const Banner = () => {
             className="w-full rounded-2xl"
           />
         </div>
-      </div>
+      </header>
     );
 };
 
