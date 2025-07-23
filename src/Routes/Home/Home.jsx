@@ -52,8 +52,8 @@ const Home = () => {
         <h1 className="text-[28px] md:text-[40px] font-bold text-center pb-12 md:pb-12">
         Explore Cutting-Edge Gadgets
       </h1>
-      
-      <div className="flex flex-col md:flex-row gap-6 pb-12 md:pb-18 lg:pb-24">
+
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-6 pb-12 md:pb-18 lg:pb-24">
         {/* sidebar */}
         <div className="w-full md:w-64 h-fit bg-white rounded-xl shadow-md p-6">
           <Sidebar

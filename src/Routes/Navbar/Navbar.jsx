@@ -37,7 +37,8 @@ const Navbar = () => {
   // return the navbar
   return (
     <div className="px-4 pt-4 md:px-8 md:pt-8 bg-slate-100">
-      <div className="navbar px-4 bg-purple-700 text-white rounded-t-xl md:rounded-t-2xl" ref={navbarRef}>
+      <nav className="container bg-purple-700 text-white rounded-t-xl md:rounded-t-2xl">
+        <div className="navbar max-w-5xl mx-auto px-4 md:pl-0 md:pr-4 " ref={navbarRef}>
         <div className="navbar-start">
           <a
             href="/"
@@ -72,6 +73,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      </nav>
     </div>
   );
 };
