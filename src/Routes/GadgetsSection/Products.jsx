@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ProductCart from "../Carts/ProductCart";
+import ProductCard from "../Cards/ProductCard";
 import Sidebar from "../Sidebar/Sidebar";
 
 const Products = () => {
@@ -13,7 +13,6 @@ const Products = () => {
       try {
         const response = await fetch("/gadgetsData.json");
         const data = await response.json();
-        console.log("data", data);
         setProducts(data);
         setFilteredProducts(data);
 
@@ -62,7 +61,7 @@ const Products = () => {
         {/* product cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProducts.map((product) => (
-            <ProductCart key={product.product_id} product={product} />
+            <ProductCard key={product.product_id} product={product} />
           ))}
         </div>
       </div>

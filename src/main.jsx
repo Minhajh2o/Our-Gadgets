@@ -28,9 +28,9 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "products/:productId",
+        path: "/products/:productId",
         element: <ProductDetails />,
-        loader: () => fetch('/gadgetsData.json'),
+        loader: () => fetch("/gadgetsData.json"),
       },
     ],
   },

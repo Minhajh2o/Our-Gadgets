@@ -6,7 +6,7 @@
     "category": "Phones",
     "price": 1299,
     "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
-    "specification": [
+    "specifications": [
       "6.7-inch Super Retina XDR display",
       "A17 Bionic chip",
       "Triple-camera system (48MP Main, 12MP Telephoto, 12MP Ultrawide)",
@@ -23,7 +23,7 @@
     "category": "Phones",
     "price": 1199,
     "description": "Flagship smartphone with high-end performance and S Pen support.",
-    "specification": [
+    "specifications": [
       "6.8-inch QHD+ AMOLED display",
       "Snapdragon 8 Gen 2",
       "200MP main camera",
@@ -40,7 +40,7 @@
     "category": "Phones",
     "price": 999,
     "description": "Google’s flagship with powerful AI features and great camera.",
-    "specification": [
+    "specifications": [
       "6.7-inch LTPO OLED",
       "Google Tensor G2",
       "Triple rear camera with Super Res Zoom",
@@ -57,7 +57,7 @@
     "category": "Phones",
     "price": 849,
     "description": "Performance meets elegance in the OnePlus 11 5G.",
-    "specification": [
+    "specifications": [
       "Snapdragon 8 Gen 2",
       "120Hz AMOLED display",
       "Hasselblad camera tuning",
@@ -74,7 +74,7 @@
     "category": "Phones",
     "price": 699,
     "description": "Minimalist design and solid performance in a transparent shell.",
-    "specification": [
+    "specifications": [
       "6.7-inch OLED display",
       "Glyph Interface",
       "Dual camera setup",
@@ -91,7 +91,7 @@
     "category": "Phones",
     "price": 1399,
     "description": "Built for creatives with industry-leading display and camera tech.",
-    "specification": [
+    "specifications": [
       "4K OLED 120Hz display",
       "Snapdragon 8 Gen 2",
       "Eye Autofocus and real-time tracking",
@@ -108,7 +108,7 @@
     "category": "MacBook",
     "price": 1999,
     "description": "Next-gen performance in a sleek aluminum chassis.",
-    "specification": [
+    "specifications": [
       "M2 Pro chip",
       "16GB Unified Memory",
       "512GB SSD",
@@ -125,7 +125,7 @@
     "category": "Laptops",
     "price": 1799,
     "description": "Compact gaming beast with Ryzen and RTX performance.",
-    "specification": [
+    "specifications": [
       "AMD Ryzen 9",
       "NVIDIA RTX 4060",
       "14-inch QHD+ display",
@@ -142,7 +142,7 @@
     "category": "Laptops",
     "price": 1399,
     "description": "Elegant, powerful, and ultra-portable laptop.",
-    "specification": [
+    "specifications": [
       "13.4-inch InfinityEdge display",
       "Intel Core i7 12th Gen",
       "16GB RAM",
@@ -159,7 +159,7 @@
     "category": "Accessories",
     "price": 399,
     "description": "Industry-leading noise-canceling headphones.",
-    "specification": [
+    "specifications": [
       "Hi-Res Audio",
       "8 microphones for ANC",
       "30 hours battery life",
@@ -176,7 +176,7 @@
     "category": "Accessories",
     "price": 119,
     "description": "Ultimate productivity mouse for professionals.",
-    "specification": [
+    "specifications": [
       "Silent clicks",
       "8K DPI sensor",
       "USB-C fast charging",
@@ -193,7 +193,7 @@
     "category": "Smart Watches",
     "price": 429,
     "description": "The latest smartwatch from Apple with health & fitness tracking.",
-    "specification": [
+    "specifications": [
       "Always-On Retina display",
       "Blood oxygen monitoring",
       "ECG app",
@@ -210,7 +210,7 @@
     "category": "Smart Watches",
     "price": 349,
     "description": "Smarter fitness tracking and longer battery life.",
-    "specification": [
+    "specifications": [
       "BioActive Sensor",
       "Sleep Coaching",
       "Fitness Tracking",
