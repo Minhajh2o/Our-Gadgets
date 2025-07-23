@@ -26,7 +26,7 @@ const Home = () => {
       <h1 className="text-[28px] md:text-[40px] font-bold text-center pb-12 md:pb-12">
         Explore Cutting-Edge Gadgets
       </h1>
-      <div className="pb-12 md:pb-24">
+      <div className="pb-12 md:pb-18 lg:pb-24">
         {/* Additional content can be added here */}
         
         {/* product cards */}

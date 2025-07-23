@@ -2,13 +2,13 @@ import bannerImage from "../../assets/banner.jpg";
 
 const Banner = () => {
     return (
-        <div className="relative bg-purple-700 text-center text-white pt-6 md:pt-12 pb-24 md:pb-48 px-4 rounded-b-2xl mb-40 md:mb-100">
+        <div className="relative bg-purple-700 text-center text-white pt-6 lg:pt-12 pb-24 md:pb-28 lg:pb-48 px-4 rounded-b-2xl mb-40 md:mb-48 lg:mb-52 xl:mb-72 2xl:mb-96">
 
         {/* Banner Text Content */}
-        <h1 className="text-3xl md:text-[52px] font-bold max-w-4xl mx-auto leading-tight">
+        <h1 className="text-3xl md:text-4xl lg:text-[52px] font-bold max-w-4xl mx-auto leading-tight">
           Upgrade Your Tech Accessories with Our Gadget Accessories
         </h1>
-        <p className="max-w-2xl mx-auto mt-4 mb-8 text-gray-200">
+        <p className="max-w-2xl px-6 mx-auto mt-4 mb-8 text-gray-200">
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>

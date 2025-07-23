@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-White text-gray-800 pt-12 pb-4 md:pt-24 md:pb-8">
+    <footer className="bg-White text-gray-800 pt-12 pb-4 md:pt-18 lg:pt-24 md:pb-8">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header Section */}
         <div className="text-center">
@@ -13,7 +13,7 @@ const Footer = () => {
         <hr className="my-4 md:my-8 text-slate-300" />
 
         {/* Footer Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           {/* Services Column */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>

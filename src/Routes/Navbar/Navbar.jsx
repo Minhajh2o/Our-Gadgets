@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="navbar-start">
           <a
             href="/"
-            className=" md:px-4 md:py-2 text-2xl md:text-3xl font-bold rounded-md hover:bg-white hover:text-purple-700 transition-all duration-300"
+            className=" md:px-4 md:py-2 text-2xl lg:text-3xl font-bold rounded-md hover:bg-white hover:text-purple-700 transition-all duration-300"
           >
             Our Gadgets
           </a>
@@ -55,10 +55,10 @@ const Navbar = () => {
           <Links closeMenu={closeMenu} />
         </div>
         <div className="navbar-end flex items-center gap-2">
-          <a className="btn btn-circle btn-sm md:btn-md hover:bg-purple-200 transition-all duration-100">
+          <a className="btn btn-circle btn-sm lg:btn-md hover:bg-purple-200 transition-all duration-100">
             <HiOutlineShoppingCart className="text-xl text-purple-700" />
           </a>
-          <a className="btn btn-circle btn-sm md:btn-md hover:bg-purple-200 transition-all duration-100">
+          <a className="btn btn-circle btn-sm lg:btn-md hover:bg-purple-200 transition-all duration-100">
             <FaRegHeart className="text-xl text-purple-700" />
           </a>
 
