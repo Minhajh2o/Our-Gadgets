@@ -27,7 +27,7 @@ const Home = () => {
         Explore Cutting-Edge Gadgets
       </h1>
       <div className="pb-12 md:pb-18 lg:pb-24">
-        {/* Additional content can be added here */}
+        {/* sidebar will be added here */}
         
         {/* product cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
