@@ -1,0 +1,172 @@
+[
+  {
+    "product_id": "P001",
+    "product_title": "Apple iPhone 15 Pro Max",
+    "product_image": "https://i.ibb.co/N670pZBV/Apple-i-Phone-15-Pro-Max.jpg",
+    "category": "Smartphones",
+    "price": 1299,
+    "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+    "specification": [
+      "6.7-inch Super Retina XDR display",
+      "A17 Bionic chip",
+      "Triple-camera system",
+      "LiDAR Scanner",
+      "Up to 2TB storage"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Samsung Galaxy S23 Ultra",
+    "product_image": "https://i.ibb.co/k6G7z58S/Samsung-Galaxy-S23-Ultra.jpg",
+    "category": "Smartphones",
+    "price": 1199,
+    "description": "Samsung’s most powerful phone with professional-grade camera.",
+    "specification": [
+      "6.8-inch QHD+ AMOLED",
+      "Snapdragon 8 Gen 2",
+      "200MP camera",
+      "S-Pen support",
+      "5000mAh battery"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P003",
+    "product_title": "Google Pixel 7 Pro",
+    "product_image": "https://i.ibb.co/HJRG6XX/Google-Pixel-7-Pro.jpg",
+    "category": "Smartphones",
+    "price": 899,
+    "description": "Google’s smartest phone with top-tier AI and camera software.",
+    "specification": [
+      "6.7-inch OLED display",
+      "Google Tensor G2",
+      "50MP + 48MP + 12MP cameras",
+      "Titan M2 security chip",
+      "5,000mAh battery"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "P004",
+    "product_title": "OnePlus 11 5G",
+    "product_image": "https://i.ibb.co/QjPT99tR/One-Plus-11-5-G.jpg",
+    "category": "Smartphones",
+    "price": 749,
+    "description": "Flagship killer with fast performance and smooth OxygenOS.",
+    "specification": [
+      "6.7-inch AMOLED display",
+      "Snapdragon 8 Gen 2",
+      "100W SuperVOOC charging",
+      "Hasselblad camera",
+      "Dual-SIM 5G"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "P005",
+    "product_title": "Nothing Phone (2)",
+    "product_image": "https://i.ibb.co/XfRV0sM2/Nothing-Phone-2.jpg",
+    "category": "Smartphones",
+    "price": 599,
+    "description": "Unique design with transparent back and LED glyphs.",
+    "specification": [
+      "6.7-inch OLED display",
+      "Snapdragon 8+ Gen 1",
+      "50MP dual camera",
+      "Glyph interface",
+      "Nothing OS 2.0"
+    ],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": "P006",
+    "product_title": "Sony Xperia 1 V",
+    "product_image": "https://i.ibb.co/39jdnTG2/Sony-Xperia-1-V.jpg",
+    "category": "Smartphones",
+    "price": 1399,
+    "description": "Cinema-quality smartphone built for creators.",
+    "specification": [
+      "4K OLED 120Hz display",
+      "Snapdragon 8 Gen 2",
+      "Triple camera with ZEISS optics",
+      "3.5mm headphone jack",
+      "Waterproof (IP68)"
+    ],
+    "availability": true,
+    "rating": 4.3
+  },
+  {
+    "product_id": "P007",
+    "product_title": "Apple MacBook Pro M2",
+    "product_image": "https://i.ibb.co/7JxLpjpK/Apple-Mac-Book-Pro-M2.jpg",
+    "category": "Laptops",
+    "price": 1999,
+    "description": "Powerful MacBook Pro powered by the new Apple M2 chip.",
+    "specification": [
+      "13.3-inch Retina display",
+      "Apple M2 chip",
+      "8-core CPU, 10-core GPU",
+      "20 hours battery life",
+      "Touch Bar & Touch ID"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "P008",
+    "product_title": "ASUS ROG Zephyrus G14",
+    "product_image": "https://i.ibb.co/jPp5KzsC/ASUS-ROG-Zephyrus-G14.jpg",
+    "category": "Laptops",
+    "price": 1799,
+    "description": "Compact gaming laptop with power-packed AMD hardware.",
+    "specification": [
+      "14-inch QHD+ 120Hz",
+      "Ryzen 9 7940HS",
+      "NVIDIA RTX 4060",
+      "16GB DDR5 RAM",
+      "1TB SSD"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "P009",
+    "product_title": "Sony WH-1000XM5",
+    "product_image": "https://i.ibb.co/jPfxhfzC/Sony-WH-1000-XM5.jpg",
+    "category": "Accessories",
+    "price": 399,
+    "description": "Industry-leading noise-canceling wireless headphones.",
+    "specification": [
+      "Auto NC Optimizer",
+      "Up to 30 hours battery life",
+      "Touch controls",
+      "Hi-Res Audio certified",
+      "Multi-point connection"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "P010",
+    "product_title": "Logitech MX Master 3S",
+    "product_image": "https://i.ibb.co/Jjyn1C0S/Logitech-MX-Master-3-S.jpg",
+    "category": "Accessories",
+    "price": 129,
+    "description": "Advanced wireless mouse with quiet clicks and ultra-fast scrolling.",
+    "specification": [
+      "8000 DPI sensor",
+      "USB-C quick charging",
+      "Bluetooth + Logi Bolt",
+      "Quiet Clicks",
+      "Ergonomic design"
+    ],
+    "availability": true,
+    "rating": 4.6
+  }
+]
