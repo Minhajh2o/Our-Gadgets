@@ -4,7 +4,7 @@ import DashboardProductCard from "../Cards/DashboardProductCard";
 const Cart = () => {
   return (
     <div className="container max-w-5xl px-4 mx-auto">
-      <div className="flex items-center justify-between mt-12 mb-8">
+      <div className="flex flex-col md:flex-row items-center justify-between mt-12 mb-8">
         <h2 className="text-2xl font-bold">Cart</h2>
 
         {/* Cart Summary Section */}

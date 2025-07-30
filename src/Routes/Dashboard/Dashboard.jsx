@@ -4,32 +4,31 @@ import DashboardWidgets from "./DashboardWidgets";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("cart"); // 'cart' or 'wishlist'
-    const handleActiveTab = (tab) => {
+  const handleActiveTab = (tab) => {
     setActiveTab(tab);
-    }
+  };
 
-    const handleDashboardCart = () => {
-      handleActiveTab("cart");
-    };
+  const handleDashboardCart = () => {
+    handleActiveTab("cart");
+  };
 
-    const handleDashboardWishlist = () => {
-      handleActiveTab("wishlist");
-    };
+  const handleDashboardWishlist = () => {
+    handleActiveTab("wishlist");
+  };
 
-return (
+  return (
     <section>
-        {/* Dashboard Content */}
-        <DashboardDetails
-          activeTab={activeTab}
-          onCartClick={handleDashboardCart}
-          onWishlistClick={handleDashboardWishlist}
-        />
+      {/* Dashboard Content */}
+      <DashboardDetails
+        activeTab={activeTab}
+        onCartClick={handleDashboardCart}
+        onWishlistClick={handleDashboardWishlist}
+      />
 
-        {/* Dashboard Widgets */}
-        <DashboardWidgets />
-
+      {/* Dashboard Widgets */}
+      <DashboardWidgets activeTab={activeTab} />
     </section>
-);
+  );
 };
 
 export default Dashboard;
