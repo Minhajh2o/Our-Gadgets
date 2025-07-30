@@ -14,7 +14,7 @@ const ProductDetails = () => {
   console.log("Found product:", product);
 
   return (
-    <section className="relative bg-pink-300 pb-160 sm:pb-176 md:pb-100 lg:pb-112">
+    <section className="relative bg-slate-100 pb-160 sm:pb-176 md:pb-100 lg:pb-112">
       <div
         className="relative bg-purple-700 text-white pb-38 sm:pb-52 md:pb-50"
       >
