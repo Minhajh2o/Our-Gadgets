@@ -1,6 +1,6 @@
-import DashboardProductCard from "../Cards/DashboardProductCard";
 import DashboardDetails from "./DashboardDetails";
 import { useState } from "react";
+import DashboardWidgets from "./DashboardWidgets";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("cart"); // 'cart' or 'wishlist'
@@ -26,7 +26,7 @@ return (
         />
 
         {/* Dashboard Widgets */}
-        <DashboardProductCard />
+        <DashboardWidgets />
 
     </section>
 );

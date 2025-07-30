@@ -19,8 +19,12 @@ const ProductCard = ({ product }) => {
           <p className="text-gray-600 text-lg md:text-xl pt-2 pb-4">${price}</p>
           <div className="card-actions">
             <Link to={`/products/${product_id}`}>
-              <button className="btn bg-white text-purple-700 border border-purple-700 rounded-full hover:bg-purple-100">
-                Shop Now
+              <button className="p-[1px] rounded-full bg-gradient-to-b from-purple-700 to-fuchsia-600">
+                <span className="flex items-center gap-2 px-4 py-1.5 bg-white rounded-full">
+                  <span className="font-semibold text-purple-700">
+                    View Details
+                  </span>
+                </span>
               </button>
             </Link>
           </div>
