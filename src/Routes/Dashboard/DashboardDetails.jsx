@@ -21,7 +21,7 @@ const DashboardDetails = () => {
         <div className="flex justify-center gap-4 md:gap-6 pb-4 md:pb-8">
           <button
             onClick={handleDashboardCart}
-            className={`px-8 py-3 md:px-12 rounded-full shadow-md transition-colors duration-300 ${
+            className={`px-8 py-3 md:px-12 rounded-full shadow-md cursor-pointer transition-colors duration-300 ${
               activeTab === "cart"
                 ? "bg-white text-purple-700 font-semibold"
                 : "bg-purple-700 text-white border border-white hover:bg-purple-600"
@@ -31,7 +31,7 @@ const DashboardDetails = () => {
           </button>
           <button
             onClick={handleDashboardWishlist}
-            className={`px-8 py-3 md:px-12 rounded-full shadow-md transition-colors duration-300 ${
+            className={`px-8 py-3 md:px-12 rounded-full shadow-md cursor-pointer transition-colors duration-300 ${
               activeTab === "wishlist"
                 ? "bg-white text-purple-700 font-semibold"
                 : "bg-purple-700 text-white border border-white hover:bg-purple-600"
