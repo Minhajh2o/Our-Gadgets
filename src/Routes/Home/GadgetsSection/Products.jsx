@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import ProductCard from "../Cards/ProductCard";
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from "../../Sidebar/Sidebar";
+import ProductCard from "../../Cards/ProductCard";
 
 const Products = () => {
   const [products, setProducts] = useState([]);

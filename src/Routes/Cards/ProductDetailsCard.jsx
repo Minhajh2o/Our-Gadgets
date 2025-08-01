@@ -16,7 +16,11 @@ const ProductDetailsCard = ({ product }) => {
     <div className="p-6 lg:p-8 bg-white flex flex-col md:flex-row gap-6 lg:gap-8 rounded-2xl shadow-xl">
       {/* product image */}
       <figure className="w-full md:max-w-5/12 rounded-xl overflow-hidden flex place-items-center">
-        <img src={product_image} className="w-full h-full object-cover rounded-xl" />
+        <img
+          src={product_image}
+          className="w-full h-full object-cover rounded-xl"
+          alt={product_title}
+        />
       </figure>
 
       {/* product details */}

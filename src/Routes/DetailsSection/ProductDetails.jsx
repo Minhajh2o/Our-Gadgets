@@ -30,7 +30,7 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {/* product cart */}
+      {/* product card */}
       <div className="absolute top-40 sm:top-36 md:top-42 left-1/2 -translate-x-1/2 w-full max-w-5xl px-4">
         <ProductDetailsCard key={product.product_id} product={product} />
       </div>
