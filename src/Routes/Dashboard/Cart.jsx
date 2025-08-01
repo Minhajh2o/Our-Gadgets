@@ -28,8 +28,8 @@ const Cart = ({ filteredCart }) => {
 
       {/* Cart Items Section */}
       <div className="flex flex-col gap-6">
-        {filteredCart.map((item) => (
-          <DashboardProductCard key={item.product_id} product={item} />
+        {filteredCart.map((product) => (
+          <DashboardProductCard key={product.product_id} product={product} />
         ))}
       </div>
     </div>

@@ -8,8 +8,8 @@ const Wishlist = ({ filteredWishlist }) => {
       </div>
       {/* Cart Items Section */}
       <div className="flex flex-col gap-6">
-        {filteredWishlist.map((item) => (
-          <DashboardProductCard key={item.product_id} product={item} />
+        {filteredWishlist.map((product) => (
+          <DashboardProductCard key={product.product_id} product={product} />
         ))}
       </div>
     </div>
