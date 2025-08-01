@@ -1,7 +1,7 @@
 import { PiSlidersDuotone } from "react-icons/pi";
 import DashboardProductCard from "../Cards/DashboardProductCard";
 
-const Cart = () => {
+const Cart = ({ filteredCart }) => {
   return (
     <div className="container max-w-5xl px-4 mx-auto">
       <div className="flex flex-col md:flex-row items-center justify-between mt-12 mb-8">
@@ -26,8 +26,12 @@ const Cart = () => {
         </div>
       </div>
 
-        {/* Cart Items Section */}
-        <DashboardProductCard />
+      {/* Cart Items Section */}
+      <div className="flex flex-col gap-6">
+        {filteredCart.map((item) => (
+          <DashboardProductCard key={item.product_id} product={item} />
+        ))}
+      </div>
     </div>
   );
 };

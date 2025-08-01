@@ -4,8 +4,8 @@ import DashboardDetails from "./DashboardDetails";
 import DashboardWidgets from "./DashboardWidgets";
 
 const Dashboard = () => {
-  const data = useLoaderData();
-  console.log("Dashboard data:", data);
+  const gadgetsData = useLoaderData();
+  console.log("Dashboard data:", gadgetsData);
 
   return (
     <ActiveTabProvider>
@@ -14,7 +14,7 @@ const Dashboard = () => {
         <DashboardDetails />
 
         {/* Dashboard Widgets */}
-        <DashboardWidgets />
+        <DashboardWidgets gadgetsData={gadgetsData} />
       </section>
     </ActiveTabProvider>
   );
