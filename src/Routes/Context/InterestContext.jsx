@@ -31,11 +31,13 @@ export const InterestProvider = ({ children }) => {
     if (result.success) {
       setCartItems([...cartItems, id]);
     }
+    return result; // Return the result so the component can check success
   };
 
   const removeFromCart = (id) => {
-    removeData("cart", id);
-    setCartItems(cartItems.filter((itemId) => itemId === id));
+    const result = removeData("cart", id);
+    setCartItems(cartItems.filter((itemId) => itemId !== id));
+    return result;
   };
 
   // Wishlist functions
@@ -44,11 +46,13 @@ export const InterestProvider = ({ children }) => {
     if (result.success) {
       setWishlistItems([...wishlistItems, id]);
     }
+    return result;
   };
 
   const removeFromWishlist = (id) => {
-    removeData("wishlist", id);
-    setWishlistItems(wishlistItems.filter((itemId) => itemId === id));
+    const result = removeData("wishlist", id);
+    setWishlistItems(wishlistItems.filter((itemId) => itemId !== id));
+    return result;
   };
 
   const value = {
