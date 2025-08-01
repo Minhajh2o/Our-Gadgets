@@ -27,7 +27,7 @@ const Cart = () => {
       </div>
 
         {/* Cart Items Section */}
-        {/* <DashboardProductCard /> */}
+        <DashboardProductCard />
     </div>
   );
 };

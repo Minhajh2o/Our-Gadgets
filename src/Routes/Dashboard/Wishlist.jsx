@@ -1,3 +1,4 @@
+import DashboardProductCard from "../Cards/DashboardProductCard";
 
 const Wishlist = () => {
   return (
@@ -6,7 +7,7 @@ const Wishlist = () => {
         <h2 className="text-2xl font-bold">Wishlist</h2>
       </div>
       {/* Cart Items Section */}
-      {/* <DashboardProductCard /> */}
+      <DashboardProductCard />
     </div>
   );
 };

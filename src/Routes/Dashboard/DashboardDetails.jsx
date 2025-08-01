@@ -1,5 +1,7 @@
+import { useActiveTab } from "./ActiveTabContext";
 
-const DashboardDetails = ({ activeTab, onCartClick, onWishlistClick }) => {
+const DashboardDetails = () => {
+  const { activeTab, handleDashboardCart, handleDashboardWishlist } = useActiveTab();
 
   return (
     <div className="bg-purple-700 text-white ">
@@ -17,21 +19,21 @@ const DashboardDetails = ({ activeTab, onCartClick, onWishlistClick }) => {
       <div>
         <div className="flex justify-center gap-4 md:gap-6 pb-4 md:pb-8">
           <button
-            onClick={onCartClick}
+            onClick={handleDashboardCart}
             className={`px-8 py-3 md:px-12 rounded-full shadow-md transition-colors duration-300 ${
               activeTab === "cart"
                 ? "bg-white text-purple-700 font-semibold"
-                : "bg-purple-700 text-white border border-white"
+                : "bg-purple-700 text-white border border-white hover:bg-purple-600"
             }`}
           >
             Cart
           </button>
           <button
-            onClick={onWishlistClick}
+            onClick={handleDashboardWishlist}
             className={`px-8 py-3 md:px-12 rounded-full shadow-md transition-colors duration-300 ${
               activeTab === "wishlist"
                 ? "bg-white text-purple-700 font-semibold"
-                : "bg-purple-700 text-white border border-white"
+                : "bg-purple-700 text-white border border-white hover:bg-purple-600"
             }`}
           >
             Wishlist
