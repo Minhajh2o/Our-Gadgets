@@ -1,5 +1,5 @@
 import { IoClose } from "react-icons/io5";
-import { useActiveTab } from "../Dashboard/ActiveTabContext";
+import { useActiveTab } from "../Context/ActiveTabContext";
 
 const DashboardProductCard = () => {
   const { activeTab } = useActiveTab();

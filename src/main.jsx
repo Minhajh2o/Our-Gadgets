@@ -1,13 +1,15 @@
+import Root from "./Routes/Root";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Root from "./Routes/Root";
 import Home from "./Routes/Home/Home";
 import Statistics from "./Routes/Statistics/Statistics";
 import Dashboard from "./Routes/Dashboard/Dashboard";
 import ErrorPage from "./ErrorPage";
 import ProductDetails from "./Routes/DetailsSection/ProductDetails";
+import { InterestProvider } from "./Routes/Context/InterestContext";
+import { Toaster } from 'react-hot-toast'
 
 const router = createBrowserRouter([
   {
@@ -17,7 +19,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>,
+        element: <Home />,
       },
       {
         path: "statistics",
@@ -26,6 +28,7 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <Dashboard />,
+        loader: () => fetch("/gadgetsData.json"),
       },
       {
         path: "/products/:productId",
@@ -38,6 +41,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <InterestProvider>
+      <RouterProvider router={router} />
+      <Toaster />
+    </InterestProvider>
   </StrictMode>
 );

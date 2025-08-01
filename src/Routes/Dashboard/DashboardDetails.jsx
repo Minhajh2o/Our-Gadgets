@@ -1,7 +1,8 @@
-import { useActiveTab } from "./ActiveTabContext";
+import { useActiveTab } from "../Context/ActiveTabContext";
 
 const DashboardDetails = () => {
-  const { activeTab, handleDashboardCart, handleDashboardWishlist } = useActiveTab();
+  const { activeTab, handleDashboardCart, handleDashboardWishlist } =
+    useActiveTab();
 
   return (
     <div className="bg-purple-700 text-white ">

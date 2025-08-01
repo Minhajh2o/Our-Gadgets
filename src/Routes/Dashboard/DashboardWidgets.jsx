@@ -1,4 +1,4 @@
-import { useActiveTab } from "./ActiveTabContext";
+import { useActiveTab } from "../Context/ActiveTabContext";
 import Cart from "./Cart";
 import Wishlist from "./Wishlist";
 

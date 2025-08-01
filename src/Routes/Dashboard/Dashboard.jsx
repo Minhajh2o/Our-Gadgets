@@ -1,4 +1,4 @@
-import { ActiveTabProvider } from "./ActiveTabContext";
+import { ActiveTabProvider } from "../Context/ActiveTabContext";
 import DashboardDetails from "./DashboardDetails";
 import DashboardWidgets from "./DashboardWidgets";
 
@@ -8,7 +8,7 @@ const Dashboard = () => {
       <section>
         {/* Dashboard Content */}
         <DashboardDetails />
-        
+
         {/* Dashboard Widgets */}
         <DashboardWidgets />
       </section>
