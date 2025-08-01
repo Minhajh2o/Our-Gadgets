@@ -1,8 +1,14 @@
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { FaRegHeart } from "react-icons/fa";
+import { useInterest } from "../Context/InterestContext";
+import StarRatings from "react-star-ratings";
 
 const ProductDetailsCard = ({ product }) => {
+  const { addToCart, addToWishlist } = useInterest();
+
+  // Destructure product details
   const {
+    product_id,
     product_title,
     product_image,
     price,
@@ -28,7 +34,7 @@ const ProductDetailsCard = ({ product }) => {
         {/* title & price */}
         <div>
           <h1 className="text-2xl md:text-3xl font-bold">{product_title}</h1>
-          <p className="pt-3">{price}</p>
+          <p className="text-lg font-semibold pt-3">Price: ${price}</p>
         </div>
 
         {/* availability */}
@@ -41,7 +47,7 @@ const ProductDetailsCard = ({ product }) => {
         </div>
 
         {/* description */}
-        <p>{description}</p>
+        <p className="text-gray-700">{description}</p>
 
         {/* specifications */}
         <div>
@@ -58,16 +64,32 @@ const ProductDetailsCard = ({ product }) => {
         {/* rating */}
         <div>
           <h2 className="text-lg font-semibold pb-3">Rating ⭐</h2>
-          <p>{rating}</p>
+          <div className="flex items-center gap-2">
+            <StarRatings
+              rating={parseFloat(rating)}
+              starRatedColor="#FBBF24"
+              numberOfStars={5}
+              name="rating"
+              starDimension="20px"
+              starSpacing="1px"
+            />
+            <span className="text-gray-600 font-semibold">{rating}</span>
+        </div>
         </div>
 
         {/* actions */}
         <div className="flex gap-4">
-          <button className="btn bg-purple-700 text-white rounded-full">
+          <button
+            onClick={() => addToCart(product_id)}
+            className="btn bg-purple-700 text-white rounded-full"
+          >
             Add to Cart
             <HiOutlineShoppingCart />
           </button>
-          <button className="btn btn-circle text-purple-700 border-2 border-purple-700">
+          <button
+            onClick={() => addToWishlist(product_id)}
+            className="btn btn-circle text-purple-700 border-2 border-purple-700"
+          >
             <FaRegHeart />
           </button>
         </div>

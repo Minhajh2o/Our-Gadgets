@@ -12,8 +12,10 @@ const storeData = (key, id) => {
     if (!exists) {
         existingData.push(id);
         localStorage.setItem(key, JSON.stringify(existingData));
+        console.log(`Data stored in ${key}:`, existingData);
         return { success: true, message: "Item added successfully." };
     }
+    console.log(`Data already exists in ${key}:`, existingData);
     return { success: false, message: "Item already exists." };
 }
 
