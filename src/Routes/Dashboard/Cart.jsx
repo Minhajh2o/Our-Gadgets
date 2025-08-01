@@ -3,13 +3,13 @@ import DashboardProductCard from "../Cards/DashboardProductCard";
 
 const Cart = ({ filteredCart }) => {
   return (
-    <div className="container max-w-5xl px-4 mx-auto">
-      <div className="flex flex-col md:flex-row items-center justify-between mt-12 mb-8">
+    <div className="relative ">
+      <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl font-bold">Cart</h2>
 
         {/* Cart Summary Section */}
         <div className="flex items-center gap-4">
-          <p className="text-xl font-bold text-gray-800">Total cost: 999.99</p>
+          <p className="hidden md:block text-xl font-bold text-gray-800">Total cost: 999.99</p>
 
           <button className="p-[2px] rounded-full bg-gradient-to-b from-purple-700 to-fuchsia-600">
             <span className="flex items-center gap-2 px-4 py-1.5 bg-white rounded-full">
@@ -20,7 +20,7 @@ const Cart = ({ filteredCart }) => {
             </span>
           </button>
 
-          <button className="px-6 py-2.5 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-300 shadow-md">
+          <button className="hidden md:block px-6 py-2.5 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-300 shadow-md">
             Purchase
           </button>
         </div>
@@ -32,6 +32,17 @@ const Cart = ({ filteredCart }) => {
           <DashboardProductCard key={product.product_id} product={product} />
         ))}
       </div>
+
+      {/* total price and purchase button for small devices */}
+      <div className="sticky bottom-0 left-0 right-0 bg-white shadow-lg z-10 mt-6">
+        <div className="flex items-center justify-between p-4 ">
+          <p className="text-xl font-bold text-gray-800">Total cost: 999.99</p>
+
+          <button className="px-6 py-2 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-300 shadow-md">
+            Purchase
+          </button>
+        </div>
+        </div>
     </div>
   );
 };

@@ -22,7 +22,7 @@ const DashboardWidgets = ({ gadgetsData }) => {
   }, [cartItems, wishlistItems, gadgetsData]);
 
   return (
-    <div>
+    <div className="container max-w-5xl px-4 mx-auto mt-6 md:pt-12 pb-8">
       {activeTab === "cart" ? (
         <Cart filteredCart={filteredCart} />
       ) : (
