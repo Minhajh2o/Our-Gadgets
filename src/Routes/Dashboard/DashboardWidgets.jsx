@@ -24,10 +24,10 @@ const DashboardWidgets = ({ gadgetsData }) => {
       );
     }
   }, [cartItems, wishlistItems, gadgetsData]);
-// pt-12 pb-4 md:pt-18 lg:pt-24 md:pb-8
+  
   return (
     <div className="bg-slate-100">
-      <div className="container max-w-5xl px-4 mx-auto pt-6 md:pt-12 pb-12 md:pb-18 lg:pb-24">
+      <div className="container max-w-5xl px-4 md:px-8 mx-auto pt-6 md:pt-12 pb-12 md:pb-18 lg:pb-24">
         {activeTab === "cart" ? (
           <Cart filteredCart={filteredCart} setFilteredCart={setFilteredCart} />
         ) : (

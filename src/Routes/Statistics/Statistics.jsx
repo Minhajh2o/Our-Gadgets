@@ -1,7 +1,14 @@
+import { useLoaderData } from "react-router-dom";
+import StatisticsDetails from "./StatisticsDetails";
+import ComposedChartSection from "./ComposedChartSection";
+
 const Statistics = () => {
+    const gadgetsData = useLoaderData();
     return (
         <div>
-            <h1 className="text-3xl font-bold text-center my-8">Statistics</h1>
+            <StatisticsDetails />
+            {/* <Composed Chart /> */}
+            <ComposedChartSection gadgetsData={gadgetsData} />
         </div>
     );
 };

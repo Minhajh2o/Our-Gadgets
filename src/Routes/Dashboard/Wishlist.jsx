@@ -3,9 +3,7 @@ import DashboardProductCard from "../Cards/DashboardProductCard";
 const Wishlist = ({ filteredWishlist }) => {
   return (
     <div>
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold">Wishlist</h2>
-      </div>
+      <h2 className="text-2xl font-bold mb-8">Wishlist</h2>
       {/* Cart Items Section */}
       <div className="flex flex-col gap-6">
         {filteredWishlist.map((product) => (
