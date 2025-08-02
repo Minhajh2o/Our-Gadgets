@@ -1,9 +1,13 @@
 import { PiSlidersDuotone } from "react-icons/pi";
 import DashboardProductCard from "../Cards/DashboardProductCard";
 import { useEffect, useState } from "react";
+import { useInterest } from "../Context/InterestContext";
+import toast from "react-hot-toast";
 
 const Cart = ({ filteredCart, setFilteredCart }) => {
   const [totalPrice, setTotalPrice] = useState(0);
+  const { clearCart } = useInterest();
+
   // Calculate total price of items in the cart
   useEffect(() => {
     const totalCost = filteredCart
@@ -19,8 +23,16 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
   };
 
   const handlePurchase = () => {
+    // Clear all items from cart in localStorage and context atomically
+    clearCart();
+
+    // Clear the local state
     setFilteredCart([]);
+    // Reset total Price to zero
     setTotalPrice(0);
+
+    // Show success message
+    toast.success("Purchase successful! Thank you for your order.");
   };
 
   return (

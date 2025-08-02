@@ -40,6 +40,13 @@ export const InterestProvider = ({ children }) => {
     return result;
   };
 
+  // Clear all cart items (for purchase)
+  const clearCart = () => {
+    localStorage.removeItem("cart");
+    setCartItems([]);
+    return { success: true, message: "Cart cleared successfully." };
+  };
+
   // Wishlist functions
   const addToWishlist = (id) => {
     const result = storeData("wishlist", id);
@@ -60,6 +67,7 @@ export const InterestProvider = ({ children }) => {
     wishlistItems,
     addToCart,
     removeFromCart,
+    clearCart,
     addToWishlist,
     removeFromWishlist,
   };
