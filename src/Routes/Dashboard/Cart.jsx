@@ -2,7 +2,7 @@ import { PiSlidersDuotone } from "react-icons/pi";
 import DashboardProductCard from "../Cards/DashboardProductCard";
 import { useEffect, useState } from "react";
 import { useInterest } from "../Context/InterestContext";
-import toast from "react-hot-toast";
+import PurchasedModal from "../Modal/PurchasedModal";
 
 const Cart = ({ filteredCart, setFilteredCart }) => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -23,16 +23,18 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
   };
 
   const handlePurchase = () => {
+    // Show purchase success modal
+    document.getElementById("my_modal_5").showModal();
+  };
+
+  // Function to handle modal close and clear cart
+  const handleModalClose = () => {
     // Clear all items from cart in localStorage and context atomically
     clearCart();
-
     // Clear the local state
     setFilteredCart([]);
     // Reset total Price to zero
     setTotalPrice(0);
-
-    // Show success message
-    toast.success("Purchase successful! Thank you for your order.");
   };
 
   return (
@@ -94,6 +96,9 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
           </button>
         </div>
       </div>
+
+      {/* Purchase Success Modal */}
+      <PurchasedModal totalPrice={totalPrice} onClose={handleModalClose} />
     </div>
   );
 };

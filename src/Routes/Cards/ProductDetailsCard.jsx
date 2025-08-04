@@ -2,6 +2,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { FaRegHeart } from "react-icons/fa";
 import { useInterest } from "../Context/InterestContext";
 import StarRatings from "react-star-ratings";
+import toast from "react-hot-toast";
 
 const ProductDetailsCard = ({ product }) => {
   const { addToCart, addToWishlist } = useInterest();
@@ -17,6 +18,28 @@ const ProductDetailsCard = ({ product }) => {
     availability,
     rating,
   } = product;
+
+  
+  // Handler for adding to cart
+  const handleAddToCart = () => {
+    const result = addToCart(product_id);
+    if (result.success) {
+      toast.success("Product added to cart!");
+    } else {
+      toast.error(result.message);
+    }
+  };
+
+  // Handler for adding to wishlist
+  const handleAddToWishlist = () => {
+    const result = addToWishlist(product_id);
+    if (result.success) {
+      toast.success("Product added to wishlist!");
+    } else {
+      toast.error(result.message);
+    }
+  };
+
 
   return (
     <div className="p-6 lg:p-8 bg-white flex flex-col md:flex-row gap-6 lg:gap-8 rounded-2xl shadow-xl">
@@ -80,14 +103,14 @@ const ProductDetailsCard = ({ product }) => {
         {/* actions */}
         <div className="flex gap-4">
           <button
-            onClick={() => addToCart(product_id)}
+            onClick={() => handleAddToCart()}
             className="btn bg-purple-700 text-white rounded-full"
           >
             Add to Cart
             <HiOutlineShoppingCart />
           </button>
           <button
-            onClick={() => addToWishlist(product_id)}
+            onClick={() => handleAddToWishlist()}
             className="btn btn-circle text-purple-700 border-2 border-purple-700"
           >
             <FaRegHeart />
