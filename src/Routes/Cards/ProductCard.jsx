@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
           <div className="card-actions">
             <Link to={`/products/${product_id}`}>
               <button className="p-[1px] rounded-full bg-gradient-to-b from-purple-700 to-fuchsia-600">
-                <span className="flex items-center gap-2 px-4 py-1.5 bg-white rounded-full">
+                <span className="flex items-center gap-2 px-4 py-1.5 bg-white rounded-full hover:bg-purple-100 transition-color duration-300 cursor-pointer">
                   <span className="font-semibold text-purple-700">
                     View Details
                   </span>

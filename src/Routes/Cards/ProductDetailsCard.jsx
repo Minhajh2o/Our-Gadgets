@@ -104,14 +104,14 @@ const ProductDetailsCard = ({ product }) => {
         <div className="flex gap-4">
           <button
             onClick={() => handleAddToCart()}
-            className="btn bg-purple-700 text-white rounded-full"
+            className="btn bg-purple-700 text-white rounded-full hover:bg-purple-800 transition-colors duration-300"
           >
             Add to Cart
             <HiOutlineShoppingCart />
           </button>
           <button
             onClick={() => handleAddToWishlist()}
-            className="btn btn-circle text-purple-700 border-2 border-purple-700"
+            className="btn btn-circle text-purple-700 border-2 border-purple-700 hover:bg-purple-100 transition-colors duration-300"
           >
             <FaRegHeart />
           </button>

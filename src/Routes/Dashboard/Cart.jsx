@@ -3,6 +3,7 @@ import DashboardProductCard from "../Cards/DashboardProductCard";
 import { useEffect, useState } from "react";
 import { useInterest } from "../Context/InterestContext";
 import PurchasedModal from "../Modal/PurchasedModal";
+import EmptyState from "../EmptyState/EmptyState";
 
 const Cart = ({ filteredCart, setFilteredCart }) => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -29,7 +30,7 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
 
   // Function to handle modal close and clear cart
   const handleModalClose = () => {
-    // Clear all items from cart in localStorage and context atomically
+    // Clear all items from cart in localStorage and context
     clearCart();
     // Clear the local state
     setFilteredCart([]);
@@ -50,12 +51,11 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
 
           <button
             onClick={sortByPrice}
-            // Add the disabled attribute to functionally disable the button
             disabled={filteredCart.length === 0}
             className={`p-[2px] rounded-full bg-gradient-to-b from-purple-700 to-fuchsia-600 cursor-pointer transition-opacity duration-300
-              disabled:opacity-50 disabled:cursor-not-allowed`} // Use Tailwind's disabled: prefix
+              disabled:opacity-50 disabled:cursor-not-allowed`} 
           >
-            <span className="flex items-center gap-2 px-4 py-1.5 bg-white rounded-full">
+            <span className="flex items-center gap-2 px-4 py-1.5 bg-white rounded-full hover:bg-purple-100 transition-color duration-300">
               <span className="font-semibold text-purple-700">
                 Sort by Price
               </span>
@@ -66,20 +66,25 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
           <button
             onClick={handlePurchase}
             disabled={Number(totalPrice) === 0}
-            className={`hidden md:block px-6 py-2.5 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full cursor-pointer transition-opacity duration-300 shadow-md
-              disabled:opacity-50 disabled:cursor-not-allowed`} // Use Tailwind's disabled: prefix
+            className={`hidden md:block px-6 py-2.5 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full cursor-pointer hover:scale-103 transition-all duration-300 shadow-md
+              disabled:opacity-50 disabled:cursor-not-allowed`} 
           >
             Purchase
           </button>
         </div>
       </div>
 
-      {/* Cart Items Section */}
-      <div className="flex flex-col gap-6">
-        {filteredCart.map((product) => (
-          <DashboardProductCard key={product.product_id} product={product} />
-        ))}
-      </div>
+      {filteredCart.length === 0 ? (
+        <div className="flex items-center justify-center">
+          <EmptyState />
+        </div>
+      ) : (
+        <div className="flex flex-col gap-6">
+          {filteredCart.map((product) => (
+            <DashboardProductCard key={product.product_id} product={product} />
+          ))}
+        </div>
+      )}
 
       {/* total price and purchase button for small devices */}
       <div className="md:hidden sticky bottom-0 left-0 right-0 bg-white shadow-lg z-10 mt-6">
@@ -90,7 +95,7 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
 
           <button
             onClick={handlePurchase}
-            className="px-6 py-2 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-300 shadow-md"
+            className="px-6 py-2 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full cursor-pointer hover:opacity-90 transition-opacity duration-300 shadow-md"
           >
             Purchase
           </button>
