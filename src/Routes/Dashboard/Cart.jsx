@@ -1,12 +1,13 @@
 import { PiSlidersDuotone } from "react-icons/pi";
 import DashboardProductCard from "../Cards/DashboardProductCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState  } from "react";
 import { useInterest } from "../Context/InterestContext";
 import PurchasedModal from "../Modal/PurchasedModal";
 import EmptyState from "../EmptyState/EmptyState";
 
 const Cart = ({ filteredCart, setFilteredCart }) => {
   const [totalPrice, setTotalPrice] = useState(0);
+
   const { clearCart } = useInterest();
 
   // Calculate total price of items in the cart

@@ -5,7 +5,7 @@ import { useInterest } from "../Context/InterestContext";
 
 const DashboardProductCard = ({ product }) => {
   const { activeTab } = useActiveTab();
-  const { addToCart, removeFromCart, removeFromWishlist } = useInterest();
+  const { addToCart, removeFromCart, removeFromWishlist ,setTotalPrice } = useInterest();
 
   const { product_id, product_title, product_image, price, description } =
     product;
@@ -25,6 +25,7 @@ const DashboardProductCard = ({ product }) => {
   const handleRemoveProduct = () => {
     if (activeTab === "cart") {
       removeFromCart(product_id);
+      setTotalPrice((prev) => prev - price);
       toast.success("Product removed from cart.");
     }
     if (activeTab === "wishlist") {

@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+
 import {
   getStoredData,
   removeData,
@@ -14,24 +15,49 @@ export const useInterest = () => {
   return useContext(InterestContext);
 };
 
+
 // InterestProvider component
 export const InterestProvider = ({ children }) => {
+
   const [cartItems, setCartItems] = useState([]);
   const [wishlistItems, setWishlistItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [isInitialized, setIsInitialized] = useState(false);
+
 
   // Load initial data from local storage when the component mounts
   useEffect(() => {
     setCartItems(getStoredData("cart"));
     setWishlistItems(getStoredData("wishlist"));
+
+    // Load totalPrice from localStorage
+    const storedTotalPrice = localStorage.getItem("totalPrice");
+    if (storedTotalPrice) {
+      setTotalPrice(parseFloat(storedTotalPrice));
+    }
+    
+    setIsInitialized(true);
   }, []);
+
+
+  useEffect(() => {
+    // Only save to localStorage after initial load is complete
+    if (isInitialized) {
+      console.log("Total price updated:", totalPrice);
+      localStorage.setItem("totalPrice", totalPrice.toString());
+    }
+  }, [totalPrice, isInitialized]);
+
+  console.log("Cart items:", cartItems);
 
   // Cart functions
   const addToCart = (id) => {
-    const result = storeData("cart", id);
-    if (result.success) {
+    const resultIdStore = storeData("cart", id);
+
+    if (resultIdStore.success) {
       setCartItems([...cartItems, id]);
     }
-    return result; // Return the result so the component can check success
+    return resultIdStore; // Return the result so the component can check success
   };
 
   const removeFromCart = (id) => {
@@ -64,8 +90,10 @@ export const InterestProvider = ({ children }) => {
 
   const value = {
     cartItems,
-    wishlistItems,
     addToCart,
+    totalPrice,
+    setTotalPrice,
+    wishlistItems,
     removeFromCart,
     clearCart,
     addToWishlist,
