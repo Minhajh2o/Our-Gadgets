@@ -21,8 +21,8 @@ export const InterestProvider = ({ children }) => {
 
   const [cartItems, setCartItems] = useState([]);
   const [wishlistItems, setWishlistItems] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [isInitialized, setIsInitialized] = useState(false);
+  // const [totalPrice, setTotalPrice] = useState(0);
+  // const [isInitialized, setIsInitialized] = useState(false);
 
 
   // Load initial data from local storage when the component mounts
@@ -30,16 +30,17 @@ export const InterestProvider = ({ children }) => {
     setCartItems(getStoredData("cart"));
     setWishlistItems(getStoredData("wishlist"));
 
-    // Load totalPrice from localStorage
-    const storedTotalPrice = localStorage.getItem("totalPrice");
-    if (storedTotalPrice) {
-      setTotalPrice(parseFloat(storedTotalPrice));
-    }
     
-    setIsInitialized(true);
+    // Load totalPrice from localStorage
+    // const storedTotalPrice = localStorage.getItem("totalPrice");
+    // if (storedTotalPrice) {
+    //   setTotalPrice(parseFloat(storedTotalPrice));
+    // }
+    
+    // setIsInitialized(true);
   }, []);
-
-// Update totalPrice in localStorage whenever it changes
+/*
+  // Update totalPrice in localStorage whenever it changes
   useEffect(() => {
     // Only save to localStorage after initial load is complete
     if (isInitialized) {
@@ -47,8 +48,7 @@ export const InterestProvider = ({ children }) => {
       localStorage.setItem("totalPrice", totalPrice.toString());
     }
   }, [totalPrice, isInitialized]);
-
-  console.log("Cart items:", cartItems);
+*/
 
   // Cart functions
   // add item to cart
@@ -93,10 +93,10 @@ export const InterestProvider = ({ children }) => {
   };
 
   const value = {
+    // totalPrice,
+    // setTotalPrice,
     cartItems,
     addToCart,
-    totalPrice,
-    setTotalPrice,
     wishlistItems,
     removeFromCart,
     clearCart,

@@ -54,7 +54,7 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
             onClick={sortByPrice}
             disabled={filteredCart.length === 0}
             className={`p-[2px] rounded-full bg-gradient-to-b from-purple-700 to-fuchsia-600 cursor-pointer transition-opacity duration-300
-              disabled:opacity-50 disabled:cursor-not-allowed`} 
+              disabled:opacity-50 disabled:cursor-not-allowed`}
           >
             <span className="flex items-center gap-2 px-4 py-1.5 bg-white rounded-full hover:bg-purple-100 transition-color duration-300">
               <span className="font-semibold text-purple-700">
@@ -68,7 +68,7 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
             onClick={handlePurchase}
             disabled={Number(totalPrice) === 0}
             className={`hidden md:block px-6 py-2.5 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full cursor-pointer hover:scale-103 transition-all duration-300 shadow-md
-              disabled:opacity-50 disabled:cursor-not-allowed`} 
+              disabled:opacity-50 disabled:cursor-not-allowed`}
           >
             Purchase
           </button>

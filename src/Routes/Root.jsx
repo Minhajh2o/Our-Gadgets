@@ -4,8 +4,6 @@ import Footer from "./Footer/Footer";
 
 const Root = () => {
 
-  // const{totalPrice}=useInterest();
-
   return (
     <div className="container mx-auto">
       <Navbar />

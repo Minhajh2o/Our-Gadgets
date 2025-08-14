@@ -5,9 +5,10 @@ import StarRatings from "react-star-ratings";
 import toast from "react-hot-toast";
 
 const ProductDetailsCard = ({ product }) => {
-  const { addToCart, addToWishlist, setTotalPrice, totalPrice } = useInterest();
+  const { addToCart, addToWishlist } = useInterest();
+  // const { addToCart, addToWishlist, setTotalPrice, totalPrice } = useInterest();
 
-  const LIMIT = 10_000;
+  // const LIMIT = 10000;
   // Destructure product details
   const {
     product_id,
@@ -23,13 +24,13 @@ const ProductDetailsCard = ({ product }) => {
   
   // Handler for adding to cart
   const handleAddToCart = () => {
-    if (totalPrice + price > LIMIT) {
-      toast.error(`Total price exceeds limit of $${LIMIT}`);
-      return;
-    }
+    // if (totalPrice + price > LIMIT) {
+    //   toast.error(`Total price exceeds limit of $${LIMIT}`);
+    //   return;
+    // }
     const result = addToCart(product_id);
     if (result.success) {
-      setTotalPrice((prev) => prev + price);
+      // setTotalPrice((prev) => prev + price);
       toast.success("Product added to cart!");
     } else {
       toast.error(result.message);
