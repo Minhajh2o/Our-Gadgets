@@ -39,7 +39,7 @@ export const InterestProvider = ({ children }) => {
     setIsInitialized(true);
   }, []);
 
-
+// Update totalPrice in localStorage whenever it changes
   useEffect(() => {
     // Only save to localStorage after initial load is complete
     if (isInitialized) {
@@ -51,6 +51,7 @@ export const InterestProvider = ({ children }) => {
   console.log("Cart items:", cartItems);
 
   // Cart functions
+  // add item to cart
   const addToCart = (id) => {
     const resultIdStore = storeData("cart", id);
 
@@ -60,6 +61,7 @@ export const InterestProvider = ({ children }) => {
     return resultIdStore; // Return the result so the component can check success
   };
 
+  // remove item from cart
   const removeFromCart = (id) => {
     const result = removeData("cart", id);
     setCartItems(cartItems.filter((itemId) => itemId !== id));
@@ -74,6 +76,7 @@ export const InterestProvider = ({ children }) => {
   };
 
   // Wishlist functions
+  // add item to wishlist
   const addToWishlist = (id) => {
     const result = storeData("wishlist", id);
     if (result.success) {
@@ -82,6 +85,7 @@ export const InterestProvider = ({ children }) => {
     return result;
   };
 
+  // remove item from wishlist
   const removeFromWishlist = (id) => {
     const result = removeData("wishlist", id);
     setWishlistItems(wishlistItems.filter((itemId) => itemId !== id));
