@@ -10,6 +10,7 @@ import ErrorPage from "./ErrorPage";
 import ProductDetails from "./Routes/DetailsSection/ProductDetails";
 import { InterestProvider } from "./Routes/Context/InterestContext";
 import { Toaster } from 'react-hot-toast'
+import About from "./Routes/About Us/About";
 
 const router = createBrowserRouter([
   {
@@ -22,12 +23,16 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "statistics",
+        path: "/about",
+        element: <About/>
+      },
+      {
+        path: "/statistics",
         element: <Statistics />,
         loader: () => fetch("/gadgetsData.json"),
       },
       {
-        path: "dashboard",
+        path: "/dashboard",
         element: <Dashboard />,
         loader: () => fetch("/gadgetsData.json"),
       },

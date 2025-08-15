@@ -1,5 +1,6 @@
 import { useRouteError } from "react-router-dom";
 import { TbFaceIdError } from "react-icons/tb";
+import { Helmet } from "react-helmet";
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -10,6 +11,10 @@ export default function ErrorPage() {
       id="error-page"
       className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-100 to-gray-300 font-sans"
     >
+      <Helmet>
+        <title>404 - Page Not Found | Our Gadgets</title>
+      </Helmet>
+
       <div className="bg-white px-12 py-10 rounded-2xl shadow-lg text-center max-w-md">
         {/* Error Icon */}
         <div className="flex justify-center mb-6">

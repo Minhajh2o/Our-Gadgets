@@ -9,11 +9,16 @@ const Links = ({ closeMenu }) => {
     },
     {
       id: 2,
+      path: "/about",
+      name: "About",
+    },
+    {
+      id: 3,
       path: "/statistics",
       name: "Statistics",
     },
     {
-      id: 3,
+      id: 4,
       path: "/dashboard",
       name: "Dashboard",
     },

@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import ProductDetailsCard from "../Cards/ProductDetailsCard";
+import { Helmet } from "react-helmet";
 
 const ProductDetails = () => {
   const data = useLoaderData();
@@ -15,6 +16,9 @@ const ProductDetails = () => {
 
   return (
     <section className="relative bg-slate-100 pb-160 sm:pb-176 md:pb-100 lg:pb-112">
+      <Helmet>
+        <title>{product ? `${product.product_title} | Our Gadgets` : 'Product Details | Our Gadgets'}</title>
+      </Helmet>
       <div
         className="relative bg-purple-700 text-white pb-38 sm:pb-52 md:pb-50"
       >

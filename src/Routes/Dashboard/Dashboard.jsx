@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { ActiveTabProvider } from "../Context/ActiveTabContext";
 import DashboardDetails from "./DashboardDetails";
 import DashboardWidgets from "./DashboardWidgets";
+import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
   const gadgetsData = useLoaderData();
@@ -9,6 +10,10 @@ const Dashboard = () => {
 
   return (
     <ActiveTabProvider>
+      <Helmet>
+        <title>Dashboard | Our Gadgets</title>
+      </Helmet>
+
       <section>
         {/* Dashboard Content */}
         <DashboardDetails />
