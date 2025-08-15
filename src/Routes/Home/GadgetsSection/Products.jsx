@@ -43,7 +43,7 @@ const Products = () => {
   };
 
   return (
-    <section>
+    <section id="products">
       <h1 className="text-[28px] md:text-[40px] font-bold text-center pb-12 md:pb-12">
         Explore Cutting-Edge Gadgets
       </h1>

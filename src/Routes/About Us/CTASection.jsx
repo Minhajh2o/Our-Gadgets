@@ -1,4 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 const CTASection = () => {
+  const navigate = useNavigate();
+  const goToHome = () => {
+    navigate("/");
+  };
   return (
     <div className="bg-gray-50 py-16">
       <div className="container max-w-5xl mx-auto px-4 text-center">
@@ -9,7 +15,7 @@ const CTASection = () => {
           Join thousands of satisfied customers who trust Our Gadgets for their
           technology needs
         </p>
-        <button className="px-8 py-3 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-md">
+        <button onClick={goToHome} className="px-8 py-3 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-md">
           Shop Now
         </button>
       </div>

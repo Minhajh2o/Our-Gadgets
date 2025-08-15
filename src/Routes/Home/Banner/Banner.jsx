@@ -1,6 +1,12 @@
 import bannerImage from "../../../assets/banner.jpg";
 
 const Banner = () => {
+  const goToProductSection = () => {
+    const productSection = document.getElementById("products");
+    if (productSection) {
+      productSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
     return (
         <header className="relative bg-purple-700 text-center text-white pt-6 lg:pt-12 pb-24 md:pb-28 lg:pb-48 px-4 rounded-b-2xl mb-40 md:mb-48 lg:mb-52 xl:mb-72 2xl:mb-96">
 
@@ -12,7 +18,9 @@ const Banner = () => {
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>
-        <button className="btn bg-white text-purple-700 rounded-full hover:bg-purple-100 border-none mb-8 md:mb-12">
+        
+        {/* Button */}
+        <button onClick={goToProductSection} className="px-8 py-3 bg-white text-purple-700 font-semibold rounded-full hover:bg-purple-100 transition-all duration-300 shadow-md mb-8 md:mb-12">
           Shop Now
         </button>
 
