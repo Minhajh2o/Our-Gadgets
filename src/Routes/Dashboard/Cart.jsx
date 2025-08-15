@@ -1,6 +1,6 @@
 import { PiSlidersDuotone } from "react-icons/pi";
 import DashboardProductCard from "../Cards/DashboardProductCard";
-import { useEffect, useState  } from "react";
+import { useEffect, useState } from "react";
 import { useInterest } from "../Context/InterestContext";
 import PurchasedModal from "../Modal/PurchasedModal";
 import EmptyState from "../EmptyState/EmptyState";
@@ -25,8 +25,10 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
   };
 
   const handlePurchase = () => {
-    // Show purchase success modal
-    document.getElementById("my_modal_5").showModal();
+    // Only show modal if cart has items and total price > 0
+    if (filteredCart.length > 0 && Number(totalPrice) > 0) {
+      document.getElementById("my_modal_5").showModal();
+    }
   };
 
   // Function to handle modal close and clear cart
@@ -39,22 +41,25 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
     setTotalPrice(0);
   };
 
+  // Check if purchase button should be disabled
+  const isPurchaseDisabled = filteredCart.length === 0 || Number(totalPrice) === 0;
+
   return (
-    <div className="relative ">
+    <div className="relative">
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl font-bold">Cart</h2>
 
         {/* Cart Summary Section */}
         <div className="flex items-center gap-4">
           <p className="hidden md:block text-xl font-bold text-gray-800">
-            Total cost: {totalPrice}
+            Total cost: ${totalPrice}
           </p>
 
           <button
             onClick={sortByPrice}
             disabled={filteredCart.length === 0}
             className={`p-[2px] rounded-full bg-gradient-to-b from-purple-700 to-fuchsia-600 cursor-pointer transition-opacity duration-300
-              disabled:opacity-50 disabled:cursor-not-allowed`}
+              ${filteredCart.length === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:opacity-90'}`}
           >
             <span className="flex items-center gap-2 px-4 py-1.5 bg-white rounded-full hover:bg-purple-100 transition-color duration-300">
               <span className="font-semibold text-purple-700">
@@ -66,9 +71,11 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
 
           <button
             onClick={handlePurchase}
-            disabled={Number(totalPrice) === 0}
-            className={`hidden md:block px-6 py-2.5 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full cursor-pointer hover:scale-103 transition-all duration-300 shadow-md
-              disabled:opacity-50 disabled:cursor-not-allowed`}
+            disabled={isPurchaseDisabled}
+            className={`hidden md:block px-6 py-2.5 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full shadow-md transition-all duration-300
+              ${isPurchaseDisabled 
+                ? 'opacity-50 cursor-not-allowed' 
+                : 'cursor-pointer hover:scale-105'}`}
           >
             Purchase
           </button>
@@ -89,14 +96,18 @@ const Cart = ({ filteredCart, setFilteredCart }) => {
 
       {/* total price and purchase button for small devices */}
       <div className="md:hidden sticky bottom-0 left-0 right-0 bg-white shadow-lg z-10 mt-6">
-        <div className="flex items-center justify-between p-4 ">
+        <div className="flex items-center justify-between p-4">
           <p className="text-xl font-bold text-gray-800">
-            Total cost: {totalPrice}
+            Total cost: ${totalPrice}
           </p>
 
           <button
             onClick={handlePurchase}
-            className="px-6 py-2 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full cursor-pointer hover:opacity-90 transition-opacity duration-300 shadow-md"
+            disabled={isPurchaseDisabled}
+            className={`px-6 py-2 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full shadow-md transition-all duration-300
+              ${isPurchaseDisabled 
+                ? 'opacity-50 cursor-not-allowed' 
+                : 'cursor-pointer hover:scale-105'}`}
           >
             Purchase
           </button>

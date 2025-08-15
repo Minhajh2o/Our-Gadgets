@@ -24,7 +24,6 @@ export const InterestProvider = ({ children }) => {
   // const [totalPrice, setTotalPrice] = useState(0);
   // const [isInitialized, setIsInitialized] = useState(false);
 
-
   // Load initial data from local storage when the component mounts
   useEffect(() => {
     setCartItems(getStoredData("cart"));

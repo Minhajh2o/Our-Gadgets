@@ -1,42 +1,45 @@
+import { useNavigate } from "react-router-dom";
 import successIcon from "../../assets/Group.png";
 
 const PurchasedModal = ({ totalPrice, onClose }) => {
+  const navigate = useNavigate();
+
   const handleClose = () => {
-    // Call the onClose callback when modal is closed
-    if (onClose) {
-      onClose();
-    }
+    // Clear cart and reset total price
+    onClose();
+    // Navigate to home page
+    navigate("/");
   };
 
   return (
-    <dialog id="my_modal_5" className="modal modal-middle">
-      <div className="modal-box text-center p-8">
+    <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+      <div className="modal-box text-center">
         {/* Success Icon */}
-        <img
-          src={successIcon}
-          alt="Success"
-          className="w-16 h-16 mx-auto mb-4"
-        />
+        <div className="mx-auto w-16 h-16 flex items-center justify-center mb-4">
+          <img src={successIcon} alt="Success" />
+        </div>
 
-        {/* Title */}
-        <h3 className="font-bold text-2xl text-gray-800">
-          Payment Successfully
+        {/* tTitle */}
+        <h3 className="font-bold text-2xl text-gray-800 mb-2">
+          Payment Successful!
         </h3>
 
-        {/* Subtext */}
-        <p className="pt-4 text-gray-500">Thanks for purchasing.</p>
-        <p className="pt-2 text-gray-500">Total: ${totalPrice}</p>
+        {/* Description */}
+        <p className="text-gray-600 mb-4">
+          Thank you for your purchase of ${totalPrice}
+        </p>
+        <p className="text-sm text-gray-500 mb-6">
+          Your order has been placed successfully and will be processed soon.
+        </p>
 
-        {/* Close Button */}
-        <div className="modal-action mt-6">
-          <form method="dialog" className="w-full">
-            <button
-              onClick={handleClose}
-              className="btn w-full bg-gray-200 hover:bg-gray-300 border-none rounded-lg"
-            >
-              Close
-            </button>
-          </form>
+        {/* Button */}
+        <div className="modal-action justify-center">
+          <button
+            onClick={handleClose}
+            className="px-8 py-3 bg-gradient-to-b from-purple-700 to-fuchsia-600 text-white font-semibold rounded-full hover:scale-105 transition-all duration-300 shadow-md"
+          >
+            Close
+          </button>
         </div>
       </div>
     </dialog>
